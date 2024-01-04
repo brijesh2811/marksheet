@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <h1>marksheet for information technologu</h1>
+        <h2>enter marks</h2>
+        <table>
+            <tr>
+                <td>1. C Language</td>
+                <td><input type="text" min="00" max="100" id="cl" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>2. C++ Language</td>
+                <td><input type="text" min="00" max="100" id="ccl" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>3. Database</td>
+                <td><input type="text" min="00" max="100" id="db" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>4.HTML</td>
+                <td><input type="text" min="00" max="100" id="html" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="text" min="00" max="100" id="css" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>6. php</td>
+                <td><input type="text" min="00" max="100" id="php" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td>7. Core Java</td>
+                <td><input type="text" min="00" max="100" id="cj" placeholder="00"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="button" id="result" name="result" value="result" onclick="showresult()">
+                </td>
+            </tr>
+        </table>
+        <div class="box">
+            <p>Totall is : <span id="sum"></span>/700</p>
+            <p>Parcentage: <span id="par"></span></p>
+        </div>
+
+    </div>
+    <script>
+        function showresult() {
+            let cl = document.getElementById("cl").value
+            let ccl = document.getElementById("ccl").value
+            let database = document.getElementById("database").value
+            let htm = document.getElementById("htm").value
+            let cs = document.getElementById("css").value
+            let ph = document.getElementById("php").value
+            let corejava = document.getElementById("ccj").value
+
+            let total = parseFloat(csub) + parseFloat(csubb) + parseFloat(database) + parseFloat(htm) + parseFloat(cs) + parseFloat(ph) + parseFloat(corejava);
+            if (csub > 100 || csubb > 100 || database > 100 || htm > 100 || cs > 100 || ph > 100 || corejava > 100) {
+                alert("enter valid marks")
+            }
+            else {
+                sum.innerHTML = `Total is:${total}/700`;
+            }
+
+            let percentage = parseFloat(total / 700) * 100;
+            par.innerHTML = `percentage is: ${percentage}%`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
